@@ -1,6 +1,6 @@
 # Chidera Nwokolo, portfolio
 
-Personal portfolio at **https://derahenry.github.io/chidera-portfolio/**.
+Personal portfolio at **https://chidera-portfolio.vercel.app/**.
 
 Built with React, TypeScript, Vite, Tailwind CSS v4, Motion for React and Lucide icons.
 
@@ -16,11 +16,11 @@ npm run build      # production build into dist/
 
 ## Deploy
 
-Deployment is automatic. Every push to `main` runs `.github/workflows/deploy.yml`, which lints, builds and publishes `dist/` to GitHub Pages.
+The site is hosted on Vercel, connected to this GitHub repo. Every push to `main` deploys to production automatically, and pull requests get preview links. Vercel detects Vite, runs `npm run build` and serves `dist/`.
 
-One time setup (already done for this repo): in the repo on GitHub, go to **Settings > Pages** and set **Source** to **GitHub Actions**.
+GitHub Actions (`.github/workflows/ci.yml`) also runs lint and the build on every push and pull request.
 
-The site is served from a subpath that matches the repo name, so `base` in `vite.config.ts` is `'/chidera-portfolio/'`. If you rename the repo, change `base` and the absolute URLs in `index.html` to match, then run `npm run og`.
+`base` in `vite.config.ts` is `'/'` because the site is served from the domain root. If you add a custom domain in Vercel (Project > Settings > Domains), also change the absolute URLs in `index.html` and run `npm run og`.
 
 ## Edit content
 
