@@ -6,8 +6,6 @@ export const profile = {
   location: 'Northampton, UK',
   availability: 'Looking for a placement or graduate role',
   email: 'nwokolohenryjr8@gmail.com',
-  phone: '07919 307460',
-  phoneHref: 'tel:+447919307460',
   github: { label: 'github.com/Derahenry', href: 'https://github.com/Derahenry' },
   linkedin: { label: 'in/chidera-nwokolo', href: 'https://www.linkedin.com/in/chidera-nwokolo/' },
   cv: { href: '/assets/Chidera_Nwokolo_CV.pdf', fileName: 'Chidera_Nwokolo_CV.pdf' },

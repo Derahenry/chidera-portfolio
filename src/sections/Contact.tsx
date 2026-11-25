@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
-import { ArrowUp, ArrowUpRight, Check, Copy, Download, Phone } from 'lucide-react'
+import { ArrowUp, ArrowUpRight, Check, Copy, Download } from 'lucide-react'
 import { profile } from '../data/profile'
 import { GithubIcon, LinkedinIcon } from '../components/Icons'
 import { ButtonLink } from '../components/Button'
@@ -25,7 +25,6 @@ export function Contact() {
   }
 
   const rows = [
-    { label: 'Phone', value: profile.phone, href: profile.phoneHref, icon: Phone },
     { label: 'GitHub', value: profile.github.label, href: profile.github.href, icon: GithubIcon, external: true },
     { label: 'LinkedIn', value: profile.linkedin.label, href: profile.linkedin.href, icon: LinkedinIcon, external: true },
     { label: 'CV', value: 'Download PDF', href: profile.cv.href, icon: Download, download: profile.cv.fileName },
@@ -84,7 +83,7 @@ export function Contact() {
         </motion.div>
 
         <motion.ul
-          className="mt-20 grid border-b border-line sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4"
+          className="mt-20 grid border-b border-line sm:grid-cols-3 sm:gap-x-10"
           variants={stagger(0.08)}
           initial="hidden"
           whileInView="show"
