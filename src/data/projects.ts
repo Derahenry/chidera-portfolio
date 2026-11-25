@@ -12,10 +12,7 @@ export type ProjectLink = {
 
 export type ScreenImage = { src: string; alt: string }
 
-export type ProjectMedia =
-  | { kind: 'screens'; images: ScreenImage[] }
-  // Coded illustrations live in components/illustrations and are looked up by id.
-  | { kind: 'illustration'; id: 'events'; caption: string }
+export type ProjectMedia = { kind: 'screens'; images: ScreenImage[] }
 
 export type ProjectFact = { value: string; label: string }
 
@@ -136,9 +133,21 @@ export const projects: Project[] = [
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
     links: [{ label: 'Visit the store', href: 'https://getfitwithfaith.com', kind: 'live' }],
     media: {
-      kind: 'illustration',
-      id: 'events',
-      caption: 'Illustration of how the ticketing logic orders events. Not a screenshot of the store.',
+      kind: 'screens',
+      images: [
+        {
+          src: `${base}assets/gfwf-1.jpg`,
+          alt: 'GetFitWithFaith home page on a phone, with a photo of two women holding branded water bottles and the headline Faith, Fitness, Growth.',
+        },
+        {
+          src: `${base}assets/gfwf-2.jpg`,
+          alt: 'GetFitWithFaith events page showing a past event, Move with Purpose on 31 October, greyed out with an Event ended badge and no buy button.',
+        },
+        {
+          src: `${base}assets/gfwf-3.jpg`,
+          alt: 'GetFitWithFaith Our Story page with a close up photo of a branded water bottle and the headline This is more than a brand.',
+        },
+      ],
     },
     facts: [
       { value: '11', label: 'tickets sold for the 31 October 2026 event' },

@@ -57,7 +57,7 @@ All content lives in `src/data`. Components only read from these files.
 }
 ```
 
-`standard` cards take three fifths of a row and `compact` cards take two fifths, so pair one of each per row. Only a `featured` project shows the screenshot strip and the case study (`caseStudy`).
+`standard` cards take three fifths of a row and `compact` cards take two fifths, so pair one of each per row. A `featured` project shows a large screenshot strip and the case study (`caseStudy`). A `standard` or `compact` project shows its screenshots as a small row of three.
 
 ### Change the CV
 

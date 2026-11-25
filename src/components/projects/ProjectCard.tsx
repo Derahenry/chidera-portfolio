@@ -1,7 +1,6 @@
 import type { Project } from '../../data/projects'
 import { Reveal } from '../Reveal'
 import { Tag } from '../Tag'
-import { EventsIllustration } from './EventsIllustration'
 import { ProjectLinks } from './ProjectLinks'
 
 /** Card for standard and compact projects. Layout adapts to the project's size and media. */
@@ -21,10 +20,27 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </h3>
         <p className="mt-2 text-paper/90">{project.tagline}</p>
 
-        {project.media?.kind === 'illustration' && project.media.id === 'events' && (
-          <div className="mt-6">
-            <EventsIllustration caption={project.media.caption} />
-          </div>
+        {project.media?.kind === 'screens' && (
+          <ul className="mt-6 grid grid-cols-3 gap-2.5 sm:gap-4" aria-label={`${project.name} screenshots`}>
+            {project.media.images.map((image) => (
+              <li
+                key={image.src}
+                className="overflow-hidden rounded-[0.9rem] border border-line bg-raised p-1 sm:rounded-[1.2rem] sm:p-1.5"
+              >
+                <div className="overflow-hidden rounded-[0.65rem] sm:rounded-[0.9rem]">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    width={375}
+                    height={812}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-auto w-full transition-transform duration-700 ease-out-expo group-hover:scale-[1.03]"
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
         )}
 
         <p className="mt-6 text-[0.95rem] leading-relaxed text-muted">{project.summary}</p>
