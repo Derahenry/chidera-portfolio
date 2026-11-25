@@ -18,10 +18,10 @@ export function Projects() {
         intro="A live product, a store for a paying client and a university app. Each one solves a specific problem for specific people."
       />
 
-      <div className="grid gap-6 md:grid-cols-5 md:gap-8">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-5 md:gap-8">
         {projects.map((project, index) =>
           project.size === 'featured' ? (
-            <div key={project.slug} className="md:col-span-5">
+            <div key={project.slug} className="min-w-0 md:col-span-5">
               <FeaturedProject project={project} index={index} />
             </div>
           ) : (

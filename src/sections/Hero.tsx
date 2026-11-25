@@ -66,8 +66,8 @@ export function Hero() {
         className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-28 sm:px-8 md:pt-32"
       >
         <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show">
-          <motion.p variants={fadeUp} className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted">
-            <span className="relative flex size-2" aria-hidden="true">
+          <motion.p variants={fadeUp} className="flex items-start gap-3 text-sm text-muted">
+            <span className="relative mt-1.5 flex size-2 shrink-0" aria-hidden="true">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-50 motion-reduce:animate-none" />
               <span className="relative inline-flex size-2 rounded-full bg-accent" />
             </span>
