@@ -131,7 +131,7 @@ export const projects: Project[] = [
       'Freelance client work. I built event ticketing in Liquid that spots past events by date, greys them out, sorts them below upcoming ones and hides the buy button, so the client can add events with no code. I also wrote a light and dark mode toggle with no flash on load, a scroll reveal that respects reduced motion and a daily countdown.',
     role: 'Freelance web developer. I also shot the photos and video for the site.',
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
-    links: [],
+    links: [{ label: 'Visit the store', href: 'https://getfitwithfaith.com', kind: 'live' }],
     media: {
       kind: 'illustration',
       id: 'events',

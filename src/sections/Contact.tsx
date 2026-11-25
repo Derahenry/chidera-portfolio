@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { ArrowUp, ArrowUpRight, Check, Copy, Download, Phone } from 'lucide-react'
 import { profile } from '../data/profile'
-import { GithubIcon } from '../components/Icons'
+import { GithubIcon, LinkedinIcon } from '../components/Icons'
 import { ButtonLink } from '../components/Button'
 import { fadeUp, inView, lineUp, stagger } from '../lib/motion'
 
@@ -27,6 +27,7 @@ export function Contact() {
   const rows = [
     { label: 'Phone', value: profile.phone, href: profile.phoneHref, icon: Phone },
     { label: 'GitHub', value: profile.github.label, href: profile.github.href, icon: GithubIcon, external: true },
+    { label: 'LinkedIn', value: profile.linkedin.label, href: profile.linkedin.href, icon: LinkedinIcon, external: true },
     { label: 'CV', value: 'Download PDF', href: profile.cv.href, icon: Download, download: profile.cv.fileName },
   ]
 
@@ -83,7 +84,7 @@ export function Contact() {
         </motion.div>
 
         <motion.ul
-          className="mt-20 grid border-t border-line sm:grid-cols-3"
+          className="mt-20 grid border-b border-line sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4"
           variants={stagger(0.08)}
           initial="hidden"
           whileInView="show"
@@ -92,12 +93,12 @@ export function Contact() {
           {rows.map((row) => {
             const Icon = row.icon
             return (
-              <motion.li key={row.label} variants={fadeUp} className="border-b border-line sm:border-b-0 sm:[&+&]:border-l">
+              <motion.li key={row.label} variants={fadeUp} className="border-t border-line">
                 <a
                   href={row.href}
                   download={row.download}
                   {...(row.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="group flex items-center justify-between gap-4 py-6 transition-colors duration-300 hover:text-accent sm:px-6 sm:first:pl-0"
+                  className="group flex items-center justify-between gap-4 py-6 transition-colors duration-300 hover:text-accent"
                 >
                   <span>
                     <span className="eyebrow block">{row.label}</span>

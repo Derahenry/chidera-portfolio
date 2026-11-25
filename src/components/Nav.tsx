@@ -172,6 +172,9 @@ export function Nav() {
               <a href={`mailto:${profile.email}`} className="text-paper">
                 {profile.email}
               </a>
+              <a href={profile.linkedin.href} target="_blank" rel="noopener noreferrer">
+                LinkedIn<span className="sr-only"> (opens in a new tab)</span>
+              </a>
               <a href={profile.cv.href} download={profile.cv.fileName} className="inline-flex items-center gap-2">
                 Download CV <Download aria-hidden="true" className="size-3.5" />
               </a>
