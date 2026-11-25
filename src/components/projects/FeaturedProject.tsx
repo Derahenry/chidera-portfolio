@@ -41,7 +41,7 @@ export function FeaturedProject({ project, index }: { project: Project; index: n
         {/* Screens */}
         {project.media?.kind === 'screens' && (
           <div className="border-y border-line bg-ink/40">
-            <PhoneScreens images={project.media.images} />
+            <PhoneScreens images={project.media.images} label={project.name} />
           </div>
         )}
 
