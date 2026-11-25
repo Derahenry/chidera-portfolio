@@ -1,6 +1,6 @@
 # Chidera Nwokolo, portfolio
 
-Personal portfolio at **https://chidera-portfolio.vercel.app/**.
+Personal portfolio at **https://chidera-nwokolo.vercel.app/**.
 
 Built with React, TypeScript, Vite, Tailwind CSS v4, Motion for React and Lucide icons.
 

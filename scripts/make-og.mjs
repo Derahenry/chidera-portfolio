@@ -26,7 +26,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   <line x1="80" y1="500" x2="1120" y2="500" stroke="${line}" stroke-width="2"/>
   <circle cx="88" cy="549" r="6" fill="${accent}"/>
   <text x="108" y="557" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="${muted}">Northampton, UK. Looking for a placement or graduate role.</text>
-  <text x="1120" y="557" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="${paper}">chidera-portfolio.vercel.app</text>
+  <text x="1120" y="557" text-anchor="end" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="${paper}">chidera-nwokolo.vercel.app</text>
 </svg>`
 
 const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
