@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/* Design tokens. Change the palette here and the whole site follows. */
+@theme {
+  --color-ink: #121211; /* page background, deep charcoal */
+  --color-surface: #181816; /* cards */
+  --color-raised: #1f1f1c; /* hover and inset areas */
+  --color-line: #2c2b27; /* hairlines */
+  --color-paper: #edebe5; /* main text, soft off-white */
+  --color-muted: #a5a299; /* secondary text, 7:1 on ink */
+  --color-subtle: #87857d; /* tertiary text, 4.9:1 on ink */
+  --color-accent: #e3a46f; /* the one accent, warm clay */
+
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink);
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Small uppercase mono label used for section numbers and metadata. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-subtle);
+  }
+
+  /* Hero background: a quiet dot field that drifts, plus a pointer spotlight on desktop. */
+  .dot-field {
+    background-image: radial-gradient(circle at center, rgb(237 235 229 / 0.16) 1px, transparent 1.6px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 20%, transparent 75%);
+    mask-size: 200% 200%;
+    mask-repeat: no-repeat;
+    animation: field-drift 28s var(--ease-out-expo) infinite alternate;
+  }
+
+  .dot-spotlight {
+    background-image: radial-gradient(circle at center, rgb(227 164 111 / 0.7) 1px, transparent 1.6px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(220px circle at var(--mx, -500px) var(--my, -500px), #000, transparent 70%);
+  }
+
+  @media (hover: none) {
+    .dot-spotlight {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dot-field {
+      animation: none;
+      mask-position: 50% 30%;
+    }
+  }
+
+  /* Hide scrollbars on the mobile screenshot rail while keeping it scrollable. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes field-drift {
+  0% {
+    mask-position: 10% 10%;
+  }
+  50% {
+    mask-position: 80% 30%;
+  }
+  100% {
+    mask-position: 30% 90%;
+  }
+}
