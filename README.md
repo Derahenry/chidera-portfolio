@@ -1,6 +1,6 @@
 # Chidera Nwokolo, portfolio
 
-Personal portfolio at **https://derahenry.github.io**.
+Personal portfolio at **https://derahenry.github.io/chidera-portfolio/**.
 
 Built with React, TypeScript, Vite, Tailwind CSS v4, Motion for React and Lucide icons.
 
@@ -20,7 +20,7 @@ Deployment is automatic. Every push to `main` runs `.github/workflows/deploy.yml
 
 One time setup (already done for this repo): in the repo on GitHub, go to **Settings > Pages** and set **Source** to **GitHub Actions**.
 
-The repo is named `Derahenry.github.io`, so the site is served from the domain root and `base` in `vite.config.ts` is `'/'`. If you move it to a repo with any other name, set `base` to `'/<repo-name>/'` and change the absolute URLs in `index.html`.
+The site is served from a subpath that matches the repo name, so `base` in `vite.config.ts` is `'/chidera-portfolio/'`. If you rename the repo, change `base` and the absolute URLs in `index.html` to match, then run `npm run og`.
 
 ## Edit content
 
@@ -52,7 +52,7 @@ All content lives in `src/data`. Components only read from these files.
     { label: 'Try the live demo', href: 'https://...', kind: 'live' },
     { label: 'View the code', href: 'https://github.com/Derahenry/...', kind: 'repo' },
   ],
-  media: { kind: 'screens', images: [{ src: '/assets/my-app-1.jpg', alt: 'Describe the screen' }] }, // optional
+  media: { kind: 'screens', images: [{ src: `${base}assets/my-app-1.jpg`, alt: 'Describe the screen' }] }, // optional
   facts: [{ value: '12', label: 'tests' }], // optional
 }
 ```

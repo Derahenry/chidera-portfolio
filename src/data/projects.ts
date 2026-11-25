@@ -1,6 +1,9 @@
 // All projects live here. To add one, append an object to `projects`.
 // Components read this file only, so no component changes are needed.
 
+// Files in public/ are served under the site's base path (see vite.config.ts).
+const base = import.meta.env.BASE_URL
+
 export type ProjectLink = {
   label: string
   href: string
@@ -58,23 +61,23 @@ export const projects: Project[] = [
       kind: 'screens',
       images: [
         {
-          src: '/assets/dera-1.jpg',
+          src: `${base}assets/dera-1.jpg`,
           alt: 'DERA home screen showing £320.65 left to pay, £59.99 due this week, four active plans and a detected Clearpay purchase.',
         },
         {
-          src: '/assets/dera-2.jpg',
+          src: `${base}assets/dera-2.jpg`,
           alt: 'DERA payment calendar for November 2026 with due dates marked and an overdue Zilch payment listed below.',
         },
         {
-          src: '/assets/dera-3.jpg',
+          src: `${base}assets/dera-3.jpg`,
           alt: 'DERA insights screen with a wellbeing score of 53 out of 100 broken down into paying on time, how much you owe and progress so far.',
         },
         {
-          src: '/assets/dera-4.jpg',
+          src: `${base}assets/dera-4.jpg`,
           alt: 'DERA message screen for asking a provider for more time, a pause or smaller payments, with reasons to choose from.',
         },
         {
-          src: '/assets/dera-5.jpg',
+          src: `${base}assets/dera-5.jpg`,
           alt: 'DERA home screen in dark mode.',
         },
       ],

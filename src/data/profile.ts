@@ -1,5 +1,8 @@
 // Personal details used across the site. Edit here, not in components.
 
+// Files in public/ are served under the site's base path (see vite.config.ts).
+const base = import.meta.env.BASE_URL
+
 export const profile = {
   name: 'Chidera Nwokolo',
   role: 'Software Engineering Student',
@@ -8,7 +11,7 @@ export const profile = {
   email: 'nwokolohenryjr8@gmail.com',
   github: { label: 'github.com/Derahenry', href: 'https://github.com/Derahenry' },
   linkedin: { label: 'in/chidera-nwokolo', href: 'https://www.linkedin.com/in/chidera-nwokolo/' },
-  cv: { href: '/assets/Chidera_Nwokolo_CV.pdf', fileName: 'Chidera_Nwokolo_CV.pdf' },
+  cv: { href: `${base}assets/Chidera_Nwokolo_CV.pdf`, fileName: 'Chidera_Nwokolo_CV.pdf' },
   deraDemo: 'https://dera-alpha.vercel.app/?demo',
 } as const
 
