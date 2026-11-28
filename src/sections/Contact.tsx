@@ -41,7 +41,7 @@ export function Contact() {
           </motion.p>
           <h2
             id="contact-title"
-            className="mt-6 font-serif text-[3.2rem] leading-[0.95] tracking-[-0.02em] sm:text-8xl lg:text-[8.5rem]"
+            className="mt-6 font-display font-semibold text-[2.4rem] leading-[0.98] tracking-[-0.05em] min-[400px]:text-[2.7rem] sm:text-6xl lg:text-[6.5rem]"
           >
             <span className="block overflow-hidden pb-[0.06em]">
               <motion.span variants={lineUp} className="block">

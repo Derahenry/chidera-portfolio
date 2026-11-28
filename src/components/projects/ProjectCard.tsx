@@ -16,7 +16,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           <span className="text-accent">{String(index + 1).padStart(2, '0')}</span>
           <span>{project.period}</span>
         </p>
-        <h3 id={headingId} className={`mt-4 font-serif leading-none tracking-tight ${compact ? 'text-4xl' : 'text-5xl'}`}>
+        <h3 id={headingId} className={`mt-4 font-display font-semibold leading-none tracking-[-0.045em] ${compact ? 'text-4xl' : 'text-[2.4rem] min-[400px]:text-[2.7rem] sm:text-5xl'}`}>
           {project.name}
         </h3>
         <p className="mt-2 text-paper/90">{project.tagline}</p>
@@ -34,7 +34,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             {project.facts.map((fact) => (
               <div key={fact.label} className="flex flex-col-reverse gap-1">
                 <dt className="text-xs leading-snug text-muted">{fact.label}</dt>
-                <dd className="font-serif text-3xl text-paper">{fact.value}</dd>
+                <dd className="font-display font-semibold text-3xl tracking-[-0.04em] text-paper">{fact.value}</dd>
               </div>
             ))}
           </dl>

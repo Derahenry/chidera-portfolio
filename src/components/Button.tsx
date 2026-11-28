@@ -31,7 +31,7 @@ const iconMotion: Record<Icon, string> = {
 
 const variants: Record<Variant, string> = {
   primary:
-    'h-12 px-6 rounded-full bg-paper text-ink hover:bg-accent font-medium',
+    'h-12 px-6 rounded-full bg-accent text-ink hover:bg-paper font-medium',
   outline:
     'h-12 px-6 rounded-full border border-line text-paper hover:border-paper/60 hover:bg-raised font-medium',
   text: 'py-1 text-paper/90 hover:text-accent underline decoration-line underline-offset-[6px] hover:decoration-accent',

@@ -64,9 +64,9 @@ export function Nav() {
           <a href="#home" className="group flex items-center gap-2.5" aria-label={`${profile.name}, back to top`}>
             <span
               aria-hidden="true"
-              className="grid size-8 place-items-center rounded-full border border-line font-serif text-[0.95rem] italic text-accent transition-colors duration-300 group-hover:border-accent"
+              className="grid size-8 place-items-center rounded-full border border-line font-display text-[0.68rem] font-bold tracking-tight text-accent transition-colors duration-300 group-hover:border-accent"
             >
-              cn
+              CN
             </span>
             <span className="text-[0.95rem] font-medium tracking-tight">{profile.name}</span>
           </a>
@@ -152,7 +152,7 @@ export function Nav() {
                     ref={index === 0 ? firstLinkRef : undefined}
                     href={`#${item.id}`}
                     onClick={() => setOpen(false)}
-                    className="flex items-baseline gap-4 py-2 font-serif text-5xl text-paper"
+                    className="flex items-baseline gap-4 py-2 font-display font-semibold text-5xl tracking-[-0.04em] text-paper"
                     initial={{ y: '100%' }}
                     animate={{ y: '0%' }}
                     transition={{ duration: 0.6, ease, delay: 0.05 + index * 0.06 }}

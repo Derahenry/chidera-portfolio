@@ -10,7 +10,7 @@ type SectionHeadingProps = {
   id?: string
 }
 
-/** Numbered section header: "01 / Projects" over a large serif title. */
+/** Numbered section header: "01 / Projects" over a large bold title. */
 export function SectionHeading({ index, label, title, intro, id }: SectionHeadingProps) {
   return (
     <motion.header
@@ -28,7 +28,7 @@ export function SectionHeading({ index, label, title, intro, id }: SectionHeadin
       <motion.h2
         id={id}
         variants={fadeUp}
-        className="mt-5 max-w-3xl font-serif text-[2.6rem] leading-[1.02] tracking-[-0.01em] text-paper sm:text-6xl"
+        className="mt-5 max-w-3xl font-display font-semibold text-[2.4rem] leading-[1.02] tracking-[-0.045em] text-paper sm:text-[3.5rem]"
       >
         {title}
       </motion.h2>

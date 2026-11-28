@@ -82,7 +82,7 @@ export function Hero() {
 
           <h1
             id="hero-title"
-            className="mt-5 font-serif text-[3.4rem] leading-[0.95] tracking-[-0.02em] text-paper min-[400px]:text-[4rem] sm:text-[5.5rem] lg:text-[7.5rem]"
+            className="mt-5 font-display font-semibold text-[2.6rem] leading-[0.98] tracking-[-0.05em] text-paper min-[400px]:text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem]"
           >
             {headline.map((line, lineIndex) => (
               <span key={lineIndex} className="block overflow-hidden pb-[0.08em]">

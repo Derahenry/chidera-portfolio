@@ -23,7 +23,7 @@ export function FeaturedProject({ project, index }: { project: Project; index: n
               <span aria-hidden="true">·</span>
               <span>{project.period}</span>
             </p>
-            <h3 id={headingId} className="mt-5 font-serif text-6xl leading-none tracking-tight sm:text-7xl">
+            <h3 id={headingId} className="mt-5 font-display font-semibold text-6xl leading-none tracking-[-0.05em] sm:text-7xl">
               {project.name}
             </h3>
             <p className="mt-3 text-lg text-paper/90">{project.tagline}</p>
@@ -63,7 +63,7 @@ export function FeaturedProject({ project, index }: { project: Project; index: n
                 } ${i === 2 ? 'md:border-l' : ''}`}
               >
                 <dt className="text-sm text-muted">{fact.label}</dt>
-                <dd className="font-serif text-3xl text-paper sm:text-4xl">{fact.value}</dd>
+                <dd className="font-display font-semibold text-3xl tracking-[-0.04em] text-paper sm:text-4xl">{fact.value}</dd>
               </motion.div>
             ))}
           </motion.dl>
